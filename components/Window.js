@@ -41,12 +41,18 @@ const Window = ({favicon, title, children, theme}) => {
                 box-shadow: 3px 3px 3px #00000020;
                 display: flex;
                 flex-direction: column;
-                animation: fade 500ms linear 0.2s forwards;
+                opacity: 0;
+                visibility: hidden;
+                animation: fade 500ms linear 0.2s both;
+                width: 100%;
+                height: 100%;
            }
            .window.preview {
                 width: min-content;
                 height: min-content;
                 animation: unset;
+                opacity: unset;
+                visibility: unset;
            }
            .preview .window--content {
                 animation: unset;
@@ -76,6 +82,8 @@ const Window = ({favicon, title, children, theme}) => {
                 flex: 1 1 auto;
            }
            .window--content {
+                opacity: 0;
+                visibility: hidden;
                 height: 100%;
                 overflow-y: auto;
                 animation: fade 500ms linear 0.4s forwards;

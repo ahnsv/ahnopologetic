@@ -8,7 +8,12 @@ const Main = ({children}) => (
                 body {
                     margin: 0;
                 }
+                html, body {
+                    font-family: 'Nanum Gothic', san-serif;
+                }
             `}</style>
+            <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic:400,700,800"
+                  rel="preload" as={`font`}/>
         </Head>
         {children}
         <style jsx global>{`
@@ -31,9 +36,9 @@ const Main = ({children}) => (
                 flex-direction: column;
                 align-items: center;
                 justify-content: center;
+                font-family: 'Nanum Gothic', sans-serif;
            } 
            ::-webkit-scrollbar {width: 7px; height: 0;}
-            ::-webkit-scrollbar-track {margin: 54px 0 53px}
             ::-webkit-scrollbar-thumb {
                 background: rgba(0,0,0,0.0);
                 border-radius: 10px;
